@@ -1,0 +1,16 @@
+###
+POST http://localhost:8080/api/usuarios/registro
+Content-Type: application/json
+
+{
+  "nombre": "samuel andres castaño",
+  "cedula": "1095268216",
+  "telefono": "3192325795",
+  "correo": "samuel@gmail.com",
+  "fechaNacimiento": "2005-02-23",
+  "rol": "ANFITRION"
+}
+
+###
+
+GET http://localhost:8080/api/usuarios/detalle/samuel@gmail.com

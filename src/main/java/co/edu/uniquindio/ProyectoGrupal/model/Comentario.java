@@ -1,7 +1,15 @@
 package co.edu.uniquindio.ProyectoGrupal.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Comentario {
 
@@ -20,7 +28,7 @@ public class Comentario {
     @ManyToOne
     private Alojamiento alojamiento;
 
-    @ManyToOne(optional = false)
+    @OneToOne(optional = false)
     @JoinColumn(nullable = false, name = "reserva_id")
     private Reserva reserva;
 }

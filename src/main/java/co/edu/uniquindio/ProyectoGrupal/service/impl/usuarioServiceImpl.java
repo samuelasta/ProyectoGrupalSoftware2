@@ -22,7 +22,8 @@ public class usuarioServiceImpl implements UsuarioService {
 
     @Override
     public void registrarUsuario(CrearUsuarioDTO usuarioDTO) {
-        Optional<Usuario> usuario = usuarioRepository.findByEmail(usuarioDTO.correo());
+
+        Optional<Usuario> usuario = usuarioRepository.findByCorreo(usuarioDTO.correo());
         if (usuario.isPresent()) {
             throw new ValueConflictException("El usuario ya existe");
         }
@@ -34,10 +35,11 @@ public class usuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario obtenerUsuario(String email) {
-        Optional<Usuario> usuario = usuarioRepository.findByEmail(email);
+        Optional<Usuario> usuario = usuarioRepository.findByCorreo(email);
         if (usuario.isPresent()) {
             return usuario.get();
         }
         throw new ResourceNotFoundException("El usuario no existe");
     }
+
 }

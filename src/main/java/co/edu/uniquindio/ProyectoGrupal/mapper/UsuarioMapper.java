@@ -11,7 +11,7 @@ import org.mapstruct.Mappings;
 public interface UsuarioMapper {
 
 
-    @Mapping(target = "id", source = "java(java.util.UUID.randomUUID().toString())")
+    @Mapping(target = "id", expression = "java(java.util.UUID.randomUUID().toString())")
     @Mapping(target = "estado", constant = "ACTIVO")
 
 

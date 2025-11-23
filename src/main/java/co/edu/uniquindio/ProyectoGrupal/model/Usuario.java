@@ -3,10 +3,19 @@ package co.edu.uniquindio.ProyectoGrupal.model;
 import co.edu.uniquindio.ProyectoGrupal.model.enums.Estado;
 import co.edu.uniquindio.ProyectoGrupal.model.enums.Rol;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Usuario {
 

@@ -18,6 +18,7 @@ public class ControladorUsuario {
 
     private final UsuarioService usuarioService;
 
+
     @PostMapping("/registro")
     public ResponseEntity<ResponseDTO<String>> registrarUsuario(@RequestBody CrearUsuarioDTO usuario){
         usuarioService.registrarUsuario(usuario);

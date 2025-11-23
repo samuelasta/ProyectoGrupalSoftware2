@@ -38,6 +38,9 @@ public class Alojamiento {
     @Enumerated(EnumType.STRING)
     private TipoAlojamiento tipoAlojamiento;
 
+    @Column(nullable = false)
+    private double precio;
+
     @Embedded
     @Column(nullable = false)
     private Ubicacion ubicacion;
