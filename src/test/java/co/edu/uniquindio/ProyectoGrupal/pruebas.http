@@ -53,3 +53,14 @@ Accept: application/json
 ### Intentar obtener historial de un usuario inexistente
 GET http://localhost:8080/reservas/usuario/user-no-existe
 Accept: application/json
+
+
+### Obtener comentarios de un alojamiento existente
+GET http://localhost:8080/comentarios/alojamiento/aloj-123
+Accept: application/json
+
+###
+
+### Intentar obtener comentarios de un alojamiento inexistente
+GET http://localhost:8080/comentarios/alojamiento/aloj-no-existe
+Accept: application/json
