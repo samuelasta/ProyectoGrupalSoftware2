@@ -1,4 +1,4 @@
-###
+    ###
 POST http://localhost:8080/api/usuarios/registro
 Content-Type: application/json
 
@@ -14,3 +14,67 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/api/usuarios/detalle/samuel@gmail.com
+
+### Registrar opinión
+POST http://localhost:8080/opiniones
+Content-Type: application/json
+
+{
+  "usuarioId": "u1",
+  "alojamientoId": "a1",
+  "reservaId": "r1",
+  "calificacion": 5,
+  "comentario": "Excelente, muy cómodo y limpio."
+}
+
+### Cancelar reserva activa
+PUT http://localhost:8080/reservas/cancelar/res-10
+Accept: application/json
+
+### Cancelar reserva finalizada
+PUT http://localhost:8080/reservas/cancelar/res-11
+Accept: application/json
+
+### Cancelar reserva ya cancelada
+PUT http://localhost:8080/reservas/cancelar/res-12
+Accept: application/json
+
+### Cancelar reserva inexistente
+PUT http://localhost:8080/reservas/cancelar/res-inexistente
+Accept: application/json
+
+
+### Obtener historial de reservas de un usuario existente
+GET http://localhost:8080/reservas/usuario/user-123
+Accept: application/json
+
+###
+
+### Intentar obtener historial de un usuario inexistente
+GET http://localhost:8080/reservas/usuario/user-no-existe
+Accept: application/json
+
+
+### Obtener comentarios de un alojamiento existente
+GET http://localhost:8080/comentarios/alojamiento/aloj-123
+Accept: application/json
+
+###
+
+### Intentar obtener comentarios de un alojamiento inexistente
+GET http://localhost:8080/comentarios/alojamiento/aloj-no-existe
+Accept: application/json
+
+
+### Registrar reserva y recibir notificación
+POST http://localhost:8080/notificaciones/registrar
+Content-Type: application/json
+
+{
+  "checkIn": "2025-12-01T14:00:00",
+  "checkOut": "2025-12-05T11:00:00",
+  "numeroHuespedes": 2,
+  "estado": "ACTIVA",
+  "fechaCreacion": "2025-11-24T03:00:00",
+  "usuarioNombre": "Luis"
+}

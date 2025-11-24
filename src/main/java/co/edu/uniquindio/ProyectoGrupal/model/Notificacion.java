@@ -1,12 +1,12 @@
 package co.edu.uniquindio.ProyectoGrupal.model;
 
+
 import co.edu.uniquindio.ProyectoGrupal.model.enums.EstadoReserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-public class Reserva {
+public class Notificacion {
 
     @Id
     private String id;
