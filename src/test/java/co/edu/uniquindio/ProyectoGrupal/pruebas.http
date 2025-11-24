@@ -64,3 +64,17 @@ Accept: application/json
 ### Intentar obtener comentarios de un alojamiento inexistente
 GET http://localhost:8080/comentarios/alojamiento/aloj-no-existe
 Accept: application/json
+
+
+### Registrar reserva y recibir notificación
+POST http://localhost:8080/notificaciones/registrar
+Content-Type: application/json
+
+{
+  "checkIn": "2025-12-01T14:00:00",
+  "checkOut": "2025-12-05T11:00:00",
+  "numeroHuespedes": 2,
+  "estado": "ACTIVA",
+  "fechaCreacion": "2025-11-24T03:00:00",
+  "usuarioNombre": "Luis"
+}
