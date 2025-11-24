@@ -1,4 +1,4 @@
-###
+    ###
 POST http://localhost:8080/api/usuarios/registro
 Content-Type: application/json
 
@@ -14,3 +14,15 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/api/usuarios/detalle/samuel@gmail.com
+
+### Registrar opinión
+POST http://localhost:8080/opiniones
+Content-Type: application/json
+
+{
+  "usuarioId": "u1",
+  "alojamientoId": "a1",
+  "reservaId": "r1",
+  "calificacion": 5,
+  "comentario": "Excelente, muy cómodo y limpio."
+}
