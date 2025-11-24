@@ -26,3 +26,19 @@ Content-Type: application/json
   "calificacion": 5,
   "comentario": "Excelente, muy cómodo y limpio."
 }
+
+### Cancelar reserva activa
+PUT http://localhost:8080/reservas/cancelar/res-10
+Accept: application/json
+
+### Cancelar reserva finalizada
+PUT http://localhost:8080/reservas/cancelar/res-11
+Accept: application/json
+
+### Cancelar reserva ya cancelada
+PUT http://localhost:8080/reservas/cancelar/res-12
+Accept: application/json
+
+### Cancelar reserva inexistente
+PUT http://localhost:8080/reservas/cancelar/res-inexistente
+Accept: application/json

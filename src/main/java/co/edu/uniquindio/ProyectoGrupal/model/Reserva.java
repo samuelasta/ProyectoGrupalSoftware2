@@ -1,6 +1,6 @@
 package co.edu.uniquindio.ProyectoGrupal.model;
 
-import co.edu.uniquindio.ProyectoGrupal.model.enums.Estado;
+import co.edu.uniquindio.ProyectoGrupal.model.enums.EstadoReserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,7 +30,7 @@ public class Reserva {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private Estado estado;
+    private EstadoReserva estado;
 
     @Column(nullable = false)
     private LocalDateTime fechaCreacion;
