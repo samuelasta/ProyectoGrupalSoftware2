@@ -9,4 +9,5 @@ import java.util.List;
 public interface ReservaRepository extends JpaRepository<Reserva, String> {
 
     List<Reserva> findByUsuarioIdAndEstado(String usuarioId, EstadoReserva estado);
+    List<Reserva> findByUsuario_Id(String usuarioId);
 }

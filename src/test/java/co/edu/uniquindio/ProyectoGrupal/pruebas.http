@@ -42,3 +42,14 @@ Accept: application/json
 ### Cancelar reserva inexistente
 PUT http://localhost:8080/reservas/cancelar/res-inexistente
 Accept: application/json
+
+
+### Obtener historial de reservas de un usuario existente
+GET http://localhost:8080/reservas/usuario/user-123
+Accept: application/json
+
+###
+
+### Intentar obtener historial de un usuario inexistente
+GET http://localhost:8080/reservas/usuario/user-no-existe
+Accept: application/json
