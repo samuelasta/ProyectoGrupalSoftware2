@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalle Usuario</title>
+</head>
+<body>
+<h1>Detalle de Usuario</h1>
+
+<form th:action="@{/detalle}" method="get">
+    <label>Email:</label>
+    <input type="email" name="email" required/>
+    <button type="submit">Buscar</button>
+</form>
+
+<div th:if="${usuario}">
+    <p><strong>ID:</strong> <span th:text="${usuario.id}"></span></p>
+    <p><strong>Nombre:</strong> <span th:text="${usuario.nombre}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${usuario.email}"></span></p>
+</div>
+
+<div th:if="${error}">
+    <p th:text="${error}"></p>
+</div>
+</body>
+</html>

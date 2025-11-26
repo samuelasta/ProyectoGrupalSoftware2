@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crear Alojamiento</title>
+</head>
+<body>
+<h1>Nuevo Alojamiento</h1>
+<form th:action="@{/alojamientos/crear}" method="post" th:object="${alojamiento}">
+    <label>Nombre:</label>
+    <input type="text" th:field="*{nombre}" required/><br/>
+
+    <label>Ubicación:</label>
+    <input type="text" th:field="*{ubicacion}" required/><br/>
+
+    <label>Precio por noche:</label>
+    <input type="number" th:field="*{precio}" step="0.01" required/><br/>
+
+    <button type="submit">Guardar</button>
+</form>
+
+<div th:if="${mensaje}">
+    <p th:text="${mensaje}"></p>
+</div>
+</body>
+</html>
